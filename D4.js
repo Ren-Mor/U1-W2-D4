@@ -2,7 +2,7 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-let area = function (l1, l2) {
+area = function (l1, l2) {
   return l1 * l2;
 };
 let result1 = area(20, 12);
@@ -14,14 +14,14 @@ console.log(result1);
  la loro somma moltiplicata per tre.
 */
 
-let crazySum = function (a, b) {
+crazySum = function (a, b) {
   let result = a + b;
   if (a === b) {
     return result * 3;
+  } else {
+    return result;
   }
-  return result;
 };
-console.log(crazySum(5, 9));
 console.log(crazySum(9, 9));
 
 /* ESERCIZIO 3
@@ -29,7 +29,7 @@ console.log(crazySum(9, 9));
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-let crazyDiff = function (a, b) {
+crazyDiff = function (a, b) {
   let result = a - b;
   if (a > b) {
     return result * 3;
@@ -44,7 +44,7 @@ console.log(crazySum(25, 19));
  se n è uguale a 400.
 */
 
-let boundary = function (n) {
+boundary = function (n) {
   if ((n >= 20 && n <= 100) || n === 400) {
     return true;
   } else {
@@ -60,7 +60,7 @@ console.log(boundary(10));
  ritornare la stringa originale senza alterarla.
 */
 
-let epify = function (stringa) {
+epify = function (stringa) {
   if (stringa.startsWith("EPICODE")) {
     return stringa;
   } else {
@@ -75,7 +75,10 @@ console.log(epify(testo));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-let check3and7 = function()
+function check3and7(n) {
+  return n % 3 === 0 || n % 7 === 0;
+}
+console.log(check3and7(21));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
