@@ -2,7 +2,7 @@
  Scrivi una funzione di nome "area", che riceve due parametri (l1, l2) e calcola l'area del rettangolo associato.
 */
 
-area = function (l1, l2) {
+const area = function (l1, l2) {
   return l1 * l2;
 };
 let result1 = area(20, 12);
@@ -14,7 +14,7 @@ console.log(result1);
  la loro somma moltiplicata per tre.
 */
 
-crazySum = function (a, b) {
+const crazySum = function (a, b) {
   let result = a + b;
   if (a === b) {
     return result * 3;
@@ -29,22 +29,21 @@ console.log(crazySum(9, 9));
  Deve inoltre tornare la differenza assoluta moltiplicata per tre qualora il numero fornito sia maggiore di 19.
 */
 
-crazyDiff = function (a, b) {
-  let result = a - b;
-  if (a > b) {
-    return result * 3;
+const crazyDiff = function (num) {
+  if (num > 19) {
+    return Math.abs(num - 19) * 3;
+  } else {
+    return Math.abs(num - 19);
   }
-  return result;
 };
-console.log(crazySum(19, 19));
-console.log(crazySum(25, 19));
+console.log(crazyDiff(3));
 
 /* ESERCIZIO 4
  Scrivi una funzione di nome "boundary" che accetta un numero intero n come parametro, e ritorna true se n è compreso tra 20 e 100 (incluso) oppure
  se n è uguale a 400.
 */
 
-boundary = function (n) {
+const boundary = function (n) {
   if ((n >= 20 && n <= 100) || n === 400) {
     return true;
   } else {
@@ -60,7 +59,7 @@ console.log(boundary(10));
  ritornare la stringa originale senza alterarla.
 */
 
-epify = function (stringa) {
+const epify = function (stringa) {
   if (stringa.startsWith("EPICODE")) {
     return stringa;
   } else {
@@ -75,21 +74,21 @@ console.log(epify(testo));
  di 3 o di 7. (Suggerimento: usa l'operatore modulo)
 */
 
-function check3and7(n) {
+const check3and7 = function (n) {
   return n % 3 === 0 || n % 7 === 0;
-}
+};
 console.log(check3and7(21));
 
 /* ESERCIZIO 7
  Scrivi una funzione di nome "reverseString", il cui scopo è invertire una stringa fornita come parametro (es. "EPICODE" --> "EDOCIPE")
 */
 
-function reverseString(string) {
+const reverseString = function (string) {
   const revArray = [];
   for (let i = string.length - 1; i >= 0; i--) revArray.push(string[i]);
   const arrToString = revArray.join("");
   return arrToString;
-}
+};
 console.log(reverseString("epicode"));
 
 /* ESERCIZIO 8
