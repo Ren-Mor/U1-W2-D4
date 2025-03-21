@@ -116,10 +116,20 @@ upperFirstPhrase("hello world");
  della stringa originale.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const cutString = function (str) {
+  return str.slice(1, str.length - 1);
+};
+console.log(cutString("esercizio"));
 
 /* ESERCIZIO 10
  Scrivi una funzione di nome "giveMeRandom", che accetta come parametro un numero n e ritorna un'array contenente n numeri casuali inclusi tra 0 e 10.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const giveMeRandom = function (n) {
+  const arr = [];
+  for (let i = 0; i < n; i++) {
+    arr.push(Math.floor(Math.random() * 10));
+  }
+  return arr;
+};
+console.log(giveMeRandom(9));
