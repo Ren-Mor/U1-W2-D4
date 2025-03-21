@@ -96,7 +96,20 @@ console.log(reverseString("epicode"));
  La funzione deve rendere maiuscola la prima lettera di ogni parola contenuta nella stringa.
 */
 
-/* SCRIVI QUI LA TUA RISPOSTA */
+const upperFirstPhrase = function (str) {
+  let words = str.split(" ");
+  let finalStr = [];
+  for (let i = 0; i < words.length; i++) {
+    let firstChar = words[i].charAt(0);
+    let upperChar = firstChar.toUpperCase();
+    let cutString = words[i].slice(1);
+    let finalWord = upperChar + cutString;
+    finalStr.push(finalWord);
+  }
+  console.log(finalStr.join(" "));
+};
+
+upperFirstPhrase("hello world");
 
 /* ESERCIZIO 9
  Scrivi una funzione di nome "cutString", che riceve come parametro una stringa. La funzione deve creare una nuova stringa senza il primo e l'ultimo carattere
